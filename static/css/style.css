@@ -1,0 +1,602 @@
+/* ==============================
+   Google Font
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: linear-gradient(-45deg,
+            #141E30,
+            #243B55,
+            #0F2027,
+            #203A43);
+
+    background-size: 400% 400%;
+
+    animation: bgAnimation 12s ease infinite;
+
+    color: white;
+
+}
+
+/* ==============================
+   Animated Background
+============================== */
+
+.background {
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: -1;
+
+}
+
+.background span {
+
+    position: absolute;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .12);
+
+    animation: floatBubble 18s linear infinite;
+
+}
+
+.background span:nth-child(1) {
+
+    left: 10%;
+    animation-duration: 12s;
+    width: 70px;
+    height: 70px;
+
+}
+
+.background span:nth-child(2) {
+
+    left: 25%;
+    animation-duration: 18s;
+
+}
+
+.background span:nth-child(3) {
+
+    left: 40%;
+    animation-duration: 15s;
+    width: 60px;
+    height: 60px;
+
+}
+
+.background span:nth-child(4) {
+
+    left: 60%;
+    animation-duration: 20s;
+
+}
+
+.background span:nth-child(5) {
+
+    left: 78%;
+    animation-duration: 14s;
+    width: 55px;
+    height: 55px;
+
+}
+
+.background span:nth-child(6) {
+
+    left: 90%;
+    animation-duration: 17s;
+
+}
+
+@keyframes floatBubble {
+
+    0% {
+
+        transform: translateY(100vh) scale(.3);
+        opacity: 0;
+
+    }
+
+    30% {
+
+        opacity: .4;
+
+    }
+
+    100% {
+
+        transform: translateY(-120vh) scale(1.2);
+        opacity: 0;
+
+    }
+
+}
+
+@keyframes bgAnimation {
+
+    0% {
+
+        background-position: 0% 50%;
+
+    }
+
+    50% {
+
+        background-position: 100% 50%;
+
+    }
+
+    100% {
+
+        background-position: 0% 50%;
+
+    }
+
+}
+
+/* ==============================
+   Login Card
+============================== */
+
+.login-container {
+
+    width: 430px;
+
+    margin-left: 80px;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, .10);
+
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, .20);
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .35);
+
+    animation: fadeIn 1s ease;
+
+}
+
+.logo {
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+
+    font-size: 40px;
+
+    margin-bottom: 20px;
+
+}
+
+.login-container h1 {
+
+    text-align: center;
+
+    font-size: 30px;
+
+}
+
+.subtitle {
+
+    text-align: center;
+
+    color: #ddd;
+
+    margin: 10px 0 30px;
+
+}
+
+/* ==============================
+   Input Boxes
+============================== */
+
+.input-box {
+
+    position: relative;
+
+    margin-bottom: 20px;
+
+}
+
+.input-box input {
+
+    width: 100%;
+
+    padding: 15px 50px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, .15);
+
+    color: white;
+
+    font-size: 15px;
+
+    transition: .3s;
+
+}
+
+.input-box input::placeholder {
+
+    color: #ddd;
+
+}
+
+.input-box input:focus {
+
+    background: rgba(255, 255, 255, .25);
+
+    box-shadow: 0 0 15px rgba(0, 198, 255, .4);
+
+}
+
+.input-box i {
+
+    position: absolute;
+
+    left: 18px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #00e5ff;
+
+}
+
+#togglePassword {
+
+    position: absolute;
+
+    right: 18px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    cursor: pointer;
+
+    color: #fff;
+
+}
+
+/* ==============================
+   Remember Section
+============================== */
+
+.remember {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    font-size: 14px;
+
+}
+
+.remember a {
+
+    color: #00e5ff;
+
+    text-decoration: none;
+
+}
+
+.remember a:hover {
+
+    text-decoration: underline;
+
+}
+
+/* ==============================
+   Buttons
+============================== */
+
+.login-btn,
+.register-btn {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.login-btn {
+
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+
+    color: white;
+
+}
+
+.login-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 20px rgba(0, 198, 255, .4);
+
+}
+
+.register-btn {
+
+    display: block;
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    text-decoration: none;
+
+    background: rgba(255, 255, 255, .15);
+
+    color: white;
+
+}
+
+.register-btn:hover {
+
+    background: rgba(255, 255, 255, .25);
+
+}
+
+/* ==============================
+   Divider
+============================== */
+
+.divider {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #ccc;
+
+}
+
+/* ==============================
+   Right Info Panel
+============================== */
+
+.info-panel {
+
+    width: 40%;
+
+    margin-right: 80px;
+
+    animation: fadeIn 1.5s ease;
+
+}
+
+.info-panel h2 {
+
+    font-size: 42px;
+
+    margin-bottom: 30px;
+
+}
+
+.info-panel p {
+
+    font-size: 20px;
+
+    margin: 18px 0;
+
+    color: #f0f0f0;
+
+}
+
+/* ==============================
+   Loader
+============================== */
+
+#loader {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .85);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    z-index: 999;
+
+}
+
+.spinner {
+
+    width: 65px;
+
+    height: 65px;
+
+    border: 6px solid rgba(255, 255, 255, .2);
+
+    border-top: 6px solid #00c6ff;
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+
+}
+
+#loader p {
+
+    margin-top: 20px;
+
+    font-size: 18px;
+
+}
+
+@keyframes spin {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ==============================
+   Responsive
+============================== */
+
+@media(max-width:900px) {
+
+    body {
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding: 20px;
+
+        overflow: auto;
+
+    }
+
+    .login-container {
+
+        margin: 20px auto;
+
+        width: 95%;
+
+    }
+
+    .info-panel {
+
+        width: 95%;
+
+        margin: 40px auto;
+
+        text-align: center;
+
+    }
+
+}
+
+/* ===========================
+   Custom Animated Cursor
+=========================== */
+
+body {
+    cursor: none;
+}
+
+.cursor {
+    position: fixed;
+    width: 18px;
+    height: 18px;
+    background: #00e5ff;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform .08s linear;
+    z-index: 99999;
+    box-shadow:
+        0 0 10px #00e5ff,
+        0 0 25px #00e5ff,
+        0 0 45px #00e5ff;
+}
+
+.cursor2 {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #00e5ff;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: all .18s ease-out;
+    z-index: 99998;
+}
